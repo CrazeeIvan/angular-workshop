@@ -1,0 +1,38 @@
+.inline-block {
+  display: inline-block;
+  vertical-align: top;
+}
+.auto-full-width {
+  width: 100%;
+}
+.margin-bottom-sm {
+  margin-bottom: 10px;
+}
+body .loading-container {
+  display: table;
+  position: absolute;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.7);
+  height: 100%;
+  width: 100%;
+}
+body .loading-container .loading {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+input.ng-invalid.ng-dirty {
+  background-color: #fa787e;
+}
+input.ng-valid.ng-dirty {
+  background-color: #78fa89;
+}
+.main-view-container {
+  margin-top: 60px;
+}
+.wines-view .title {
+  margin: 0 0 10px 10px;
+}
+.wines-view .wine-search {
+  margin-bottom: 10px;
+}

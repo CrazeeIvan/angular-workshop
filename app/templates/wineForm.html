@@ -1,0 +1,92 @@
+<form class="form-horizontal col-md-12" name="wineForm">
+    <div class="row">
+        <div class="col-md-6">
+            <div class="form-group">
+                <label for="wineId">Id:</label>
+                <input id="wineId"
+                       class="form-control"
+                       name="id"
+                       type="text"
+                       value="{{ models.wine._id }}"
+                       disabled>
+            </div>
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text"
+                       name="name"
+                       id="name"
+                       class="form-control"
+                       ng-model="models.wine.name"
+                       required>
+
+            </div>
+            <div class="form-group">
+                <label for="grapes">Grapes:</label>
+                <input type="text"
+                       name="grapes"
+                       id="grapes"
+                       class="form-control"
+                       ng-model="models.wine.grapes"
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="country">Country:</label>
+                <input type="text"
+                       name="country"
+                       id="country"
+                       class="form-control"
+                       ng-model="models.wine.country"
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="region">Region:</label>
+                <input type="text"
+                       id="region"
+                       name="region"
+                       class="form-control"
+                       ng-model="models.wine.region">
+            </div>
+            <div class="form-group">
+                <label for="year">Year:</label>
+                <input type="text"
+                       name="year"
+                       id="year"
+                       class="form-control"
+                       ng-model="models.wine.year"
+                       required>
+            </div>
+            <div class="form-group">
+                <label for="description">Notes:</label>
+                <textarea name="description"
+                          id="description"
+                          class="form-control"
+                          style="width: 90%;"
+                          rows="6"
+                          ng-model="models.wine.description"></textarea>
+            </div>
+        </div>
+        <div class="col-md-6" ng-hide="indicators.newWine">
+            <div class="well" style="width: 180px;text-align: center;width:50%;margin: 0px auto;">
+                <p><img class="auto-full-width"
+                        id="picture"
+                        width="180"
+                        ng-src="img/wines/{{models.wine.picture}}">
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="row margin-bottom-sm">
+        <div class="form-actions">
+            <button class="btn btn-primary save"
+                    ng-disabled="wineForm.$invalid"
+                    ng-click="saveWine()">
+                Save
+            </button>
+            <button href=""
+                    class="btn delete"
+                    ng-click="deleteWine()">
+                Delete
+            </button>
+        </div>
+    </div>
+</form>
